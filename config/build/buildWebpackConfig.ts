@@ -2,11 +2,11 @@ import webpack from "webpack";
 import {buildPlugins} from "./buildPlugins";
 import {buildLoaders} from "./buildLoaders";
 import {buildResolve} from "./buildResolve";
-import {BuildOptions} from "../types/config";
+import {BuildOptions} from "./types/config";
 import {buildDevServer} from "./buildDevServer";
 
 export const buildWebpackConfig = (options: BuildOptions): webpack.Configuration => {
-  const {patch, mode} = options
+  const {patch, mode, isDev} = options
   return {
     mode,
     entry: patch.entry,
@@ -20,8 +20,7 @@ export const buildWebpackConfig = (options: BuildOptions): webpack.Configuration
       rules: buildLoaders(),
     },
     resolve: buildResolve(),
-    devtool: 'inline-source-map',
-    devServer: buildDevServer(options),
-    // devServer: buildDevServer(options),
+    devtool: isDev ? 'inline-source-map' : undefined,
+    devServer: isDev ? buildDevServer(options) : undefined,
   }
 }
