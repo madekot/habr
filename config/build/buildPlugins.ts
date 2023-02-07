@@ -3,7 +3,7 @@ import HTMLWebpackPlugin from "html-webpack-plugin";
 import { BuildOptions } from "./types/config";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
 
-export const buildPlugins = ({patch}: BuildOptions): webpack.WebpackPluginInstance[] => {
+export const buildPlugins = ({patch, isDev}: BuildOptions): webpack.WebpackPluginInstance[] => {
   return [
     new HTMLWebpackPlugin(
       { template: patch.html }
@@ -13,6 +13,9 @@ export const buildPlugins = ({patch}: BuildOptions): webpack.WebpackPluginInstan
       filename: "css/[name].[contenthash:8].css",
       chunkFilename: "css/[name].[contenthash].css",
       ignoreOrder: false,
+    }),
+    new webpack.DefinePlugin({
+      __IS_DEV__: JSON.stringify(isDev),
     })
   ]
 }
