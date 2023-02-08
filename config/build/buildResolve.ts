@@ -1,13 +1,10 @@
-import webpack from "webpack";
-import {BuildOptions} from "./types/config";
+import webpack from 'webpack';
+import { BuildOptions } from './types/config';
 
-
-export const buildResolve = (options: BuildOptions): webpack.ResolveOptions => {
-  return {
+export const buildResolve = (options: BuildOptions): webpack.ResolveOptions => ({
     extensions: ['.tsx', '.ts', '.js'],
     preferAbsolute: true,
     modules: [options.patch.src, 'node_modules'],
     mainFiles: ['index'],
-    alias: {}
-  }
-}
+    alias: {},
+});
