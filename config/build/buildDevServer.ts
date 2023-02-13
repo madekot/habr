@@ -4,5 +4,5 @@ import { BuildOptions } from './types/config';
 export const buildDevServer = (options: BuildOptions): DevServerConfiguration => ({
     port: options.port,
     historyApiFallback: true,
-    // open: true
+    open: true,
 });
