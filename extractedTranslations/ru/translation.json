@@ -3,7 +3,12 @@
   "('О сайте')": "('О сайте')",
   "('Обновить страницу')": "('Обновить страницу')",
   "('Произошла непредвиденная ошибка')": "('Произошла непредвиденная ошибка')",
+  "Lorem ipsum dolor sit amet, consectetur adipisicing elit": {
+    " \n                Alias aut consectetur dolorem dolores doloribus eaque, explicabo necessitatibus sit velit vero?": " \n                Alias aut consectetur dolorem dolores doloribus eaque, explicabo necessitatibus sit velit vero?",
+    " Alias aut consectetur dolorem dolores doloribus eaque, explicabo necessitatibus sit velit vero?": " Alias aut consectetur dolorem dolores doloribus eaque, explicabo necessitatibus sit velit vero?"
+  },
   "throw error": "throw error",
+  "Войти": "Войти",
   "Главная": "Главная",
   "Главная страница": "Главная страница",
   "Новый перевод": "Новый перевод",
