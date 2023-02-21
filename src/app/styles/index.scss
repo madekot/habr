@@ -4,13 +4,17 @@
 @import "./themes/dark";
 
 body {
-    font: var(--font-m);
-    color: var(--primary-color);
     min-height: 100vh;
 
     --navbar-height: 50px;
     --sidebar-width: 300px;
     --sidebar-width-collapsed: 80px;
+}
+
+.app,
+.app_modal {
+    font: var(--font-m);
+    color: var(--primary-color);
 }
 
 .app {
