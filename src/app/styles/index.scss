@@ -1,15 +1,7 @@
 @import "reset";
-@import "./variables/global";
-@import "./themes/normal";
-@import "./themes/dark";
-
-body {
-    min-height: 100vh;
-
-    --navbar-height: 50px;
-    --sidebar-width: 300px;
-    --sidebar-width-collapsed: 80px;
-}
+@import "variables/global";
+@import "themes/normal";
+@import "themes/dark";
 
 .app,
 .app_modal {

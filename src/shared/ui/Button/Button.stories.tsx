@@ -1,5 +1,5 @@
 import React from 'react';
-import { ComponentMeta, ComponentStory } from '@storybook/react';
+import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
@@ -32,25 +32,32 @@ ClearInverted.args = {
     theme: ButtonTheme.CLEAR_INVERTED,
 };
 
-export const Outlined = Template.bind({});
-Outlined.args = {
+export const Outline = Template.bind({});
+Outline.args = {
     children: 'Text',
     theme: ButtonTheme.OUTLINE,
 };
 
-export const OutlinedSizeL = Template.bind({});
-OutlinedSizeL.args = {
+export const OutlineSizeL = Template.bind({});
+OutlineSizeL.args = {
     children: 'Text',
     theme: ButtonTheme.OUTLINE,
     size: ButtonSize.L,
 };
 
-export const OutlinedSizeXL = Template.bind({});
-OutlinedSizeXL.args = {
+export const OutlineSizeXl = Template.bind({});
+OutlineSizeXl.args = {
     children: 'Text',
     theme: ButtonTheme.OUTLINE,
     size: ButtonSize.XL,
 };
+
+export const OutlineDark = Template.bind({});
+OutlineDark.args = {
+    children: 'Text',
+    theme: ButtonTheme.OUTLINE,
+};
+OutlineDark.decorators = [ThemeDecorator(Theme.DARK)];
 
 export const BackgroundTheme = Template.bind({});
 BackgroundTheme.args = {
@@ -69,7 +76,6 @@ Square.args = {
     children: '>',
     theme: ButtonTheme.BACKGROUND_INVERTED,
     square: true,
-    size: ButtonSize.M,
 };
 
 export const SquareSizeL = Template.bind({});
