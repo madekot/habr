@@ -2,8 +2,9 @@ import { CounterSchema } from 'entities/Counter';
 import { UserSchema } from 'entities/User';
 import { LoginSchema } from 'features/AuthByUsername';
 import {
-    AnyAction, CombinedState, EnhancedStore, Reducer, ReducersMapObject,
+    AnyAction, EnhancedStore, Reducer, ReducersMapObject,
 } from '@reduxjs/toolkit';
+import { CombinedState } from 'redux';
 import { ProfileSchema } from 'entities/Profile';
 
 export interface StateSchema {

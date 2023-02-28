@@ -1,5 +1,5 @@
-import { Dispatch } from '@reduxjs/toolkit';
 import axios from 'axios';
+import { Dispatch } from '@reduxjs/toolkit';
 import { StateSchema } from 'app/providers/StoreProvider';
 import { userActions } from 'entities/User';
 import { TestAsyncThunk } from 'shared/lib/tests/TestAsyncThunk/TestAsyncThunk';
@@ -17,7 +17,7 @@ describe('loginByUsername.test', () => {
     //     dispatch = jest.fn();
     //     getState = jest.fn();
     // });
-    //
+
     // test('success login', async () => {
     //     const userValue = { username: '123', id: '1' };
     //     mockedAxios.post.mockReturnValue(Promise.resolve({ data: userValue }));
