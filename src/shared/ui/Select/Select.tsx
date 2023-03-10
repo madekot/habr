@@ -1,5 +1,4 @@
 import { classNames, Mods } from 'shared/lib/classNames/classNames';
-import { useTranslation } from 'react-i18next';
 import { ChangeEvent, memo, useMemo } from 'react';
 import cls from './Select.module.scss';
 
@@ -9,12 +8,12 @@ export interface SelectOption {
 }
 
 interface SelectProps {
-  className?: string;
-  label?: string;
-  options?: SelectOption[];
-  value?: string;
-  onChange?: (value: string) => void;
-  readonly?: boolean;
+    className?: string;
+    label?: string;
+    options?: SelectOption[];
+    value?: string;
+    onChange?: (value: string) => void;
+    readonly?: boolean;
 }
 
 export const Select = memo((props: SelectProps) => {
@@ -45,7 +44,6 @@ export const Select = memo((props: SelectProps) => {
 
     const mods: Mods = {};
 
-    const { t } = useTranslation();
     return (
         <div className={classNames(cls.Wrapper, mods, [className])}>
             {label && (

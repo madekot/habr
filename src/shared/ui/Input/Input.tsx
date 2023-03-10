@@ -4,7 +4,7 @@ import React, {
 } from 'react';
 import cls from './Input.module.scss';
 
-type HTMLInputProps = Omit<InputHTMLAttributes<HTMLInputElement>, 'value' | 'onChange' | 'redOnly'>
+type HTMLInputProps = Omit<InputHTMLAttributes<HTMLInputElement>, 'value' | 'onChange' | 'readOnly'>
 
 interface InputProps extends HTMLInputProps {
     className?: string;
@@ -56,11 +56,11 @@ export const Input = memo((props: InputProps) => {
     };
 
     const mods: Mods = {
-        [cls.redonly]: readonly,
+        [cls.readonly]: readonly,
     };
 
     return (
-        <div className={classNames(cls.InputWrapper, mods, [className])}>
+        <div className={classNames(cls.InputWrapper, {}, [className])}>
             {placeholder && (
                 <div className={cls.placeholder}>
                     {`${placeholder}>`}

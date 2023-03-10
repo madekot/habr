@@ -2,14 +2,14 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import { Text } from 'shared/ui/Text/Text';
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 import { useTranslation } from 'react-i18next';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { getProfileReadonly, profileActions, updateProfileData } from 'entities/Profile';
 import { useCallback } from 'react';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import cls from './ProfilePageHeader.module.scss';
 
 interface ProfilePageHeaderProps {
-  className?: string;
+    className?: string;
 }
 
 export const ProfilePageHeader = (props: ProfilePageHeaderProps) => {
@@ -64,7 +64,6 @@ export const ProfilePageHeader = (props: ProfilePageHeaderProps) => {
                             {t('Сохранить')}
                         </Button>
                     </>
-
                 )}
         </div>
     );
